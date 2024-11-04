@@ -1,10 +1,7 @@
 <script setup>
-// import Bai2 from '@/views/Bai2.vue'
-import Parent from '@/views/Parent.vue'
-import Parent2 from '@/views/Parent2.vue'
+import Parent from '@/components/Parent.vue'
 </script>
 
 <template>
-<!--  <Parent />-->
-  <Parent2/>
+  <Parent></Parent>
 </template>

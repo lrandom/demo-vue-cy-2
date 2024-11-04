@@ -1,5 +1,5 @@
 import './assets/main.css'
-
+import Button from '@/components/Button.vue'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -14,6 +14,7 @@ app.directive('focus', {
   },
 })
 
+app.component('Button', Button)
 app.use(createPinia())
 app.use(router)
 app.mount('#app')
