@@ -2,15 +2,18 @@
 import Child from '@/components/Child.vue'
 import { ref } from 'vue'
 
-const refChildren = ref(null);
-
+const refChildren = ref(null)
+const changeDataOfChild = ref(false)
 function changeMessageFromParent() {
-  refChildren.value.changeMessage();
+  // refChildren.value.changeMessage()
+  changeDataOfChild.value = true;
 }
+
+
 </script>
 
 <template>
-  <Child ref="refChildren">
+  <Child :is-change-data="changeDataOfChild">
     <template #default="{ data }">
       <p>{{ data.message }}</p>
     </template>
