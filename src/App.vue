@@ -3,5 +3,6 @@ import Login from '@/views/Login.vue'
 </script>
 
 <template>
-  <Login />
+  <!--  <Login />-->
+  <RouterView></RouterView>
 </template>
