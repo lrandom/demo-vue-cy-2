@@ -1,12 +1,7 @@
 <script setup>
-import { onMounted } from 'vue'
-import { userService } from '@/services/userService.js'
-
-onMounted(() => {
-  userService.getUsers().then(users => {
-    console.log(users)
-  })
-})
+import Login from '@/views/Login.vue'
 </script>
 
-<template></template>
+<template>
+  <Login />
+</template>

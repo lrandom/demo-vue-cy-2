@@ -8,6 +8,11 @@ const axiosInstance = axios.create({
 axiosInstance.interceptors.request.use(
   config => {
     // Do something before request is sent
+    if (localStorage.getItem('token')) {
+      ;``
+      config.headers['Authorization'] =
+        `Bearer ${localStorage.getItem('token')}`
+    }
     return config
   },
   error => {
@@ -19,7 +24,12 @@ axiosInstance.interceptors.request.use(
 axiosInstance.interceptors.response.use(
   response => {
     // Do something with response data
-    return response
+    if (response.data.status === 401 || response.data.status === 403) {
+      alert('Ban vui long dang nhap')
+      localStorage.removeItem('token')
+      window.location.href = '/login'
+    }
+    return response.data
   },
   error => {
     // Do something with response error
