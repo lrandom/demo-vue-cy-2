@@ -1,12 +1,12 @@
 <script setup>
-import Parent from '@/components/Parent.vue'
-import ParentComponent from '@/components/ParentComponent.vue'
-import AsyncComponentParent from '@/components/AsyncComponentParent.vue'
+import { onMounted } from 'vue'
+import { userService } from '@/services/userService.js'
+
+onMounted(() => {
+  userService.getUsers().then(users => {
+    console.log(users)
+  })
+})
 </script>
 
-<template>
-<!--  <ParentComponent :component-type="1" />
-  <ParentComponent :component-type="2" />
-  <ParentComponent :component-type="3" />-->
-  <AsyncComponentParent/>
-</template>
+<template></template>

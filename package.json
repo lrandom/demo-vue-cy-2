@@ -5,14 +5,15 @@
   "type": "module",
   "module": "ESNext",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "cp ./config/.env.development .env  && vite",
+    "build": "cp ./config/.env.production .env && vite build",
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "pinia": "^2.2.4",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
