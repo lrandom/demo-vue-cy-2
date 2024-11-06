@@ -1,8 +1,9 @@
 <script setup>
-import Login from '@/views/Login.vue'
+import A from '@/views/A.vue'
+import B from '@/views/B.vue'
 </script>
 
 <template>
-  <!--  <Login />-->
-  <RouterView></RouterView>
+  <A />
+  <B />
 </template>
